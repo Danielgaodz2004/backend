@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <main class="container">
+
+        <h3  class="text-center" style="color: #1071BC">Черновой запрос</h3>
+
+        <span>Тип запроса: {{ calculation.type }}</span>
+
+        <h4 class="text-center">Данные</h4>
+
+        <div class="cards-wrapper d-flex flex-column">
+
+            {% for code in codes %}
+
+                {% include "code_card.html" %}
+
+            {% endfor %}
+
+        </div>
+
+    </main>
+{% endblock content %}
